@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 16 21:27:56 2020
+Created on Tue Nov 17 21:14:50 2020
 
 @author: Silence
 """
+
 
 
 import h5py
@@ -55,23 +56,3 @@ snr_tr = snr_all[index_tr]
 snr_cv = snr_all[index_cv]
 snr_te = snr_all[index_te]
 del snr_all
-
-
-
-
-
-
-
-
-
-#%%
-# with open("/home/hzy/keras/RML2016.10a_dict.dat",'rb') as xd1: #这段执行对原始数据进行切片的任务，可在spyder下运行，查看变量
-#     Xd = pickle.load(xd1,encoding='latin1')
-# snrs,mods = map(lambda j: sorted(list(set(map(lambda x: x[j], Xd.keys())))), [1,0])
-# X = []  
-# lbl = []
-# for mod in mods:
-#     for snr in snrs:
-#         X.append(Xd[(mod,snr)])
-#         for i in range(Xd[(mod,snr)].shape[0]):  lbl.append((mod,snr))
-# X = np.vstack(X)
